@@ -275,7 +275,7 @@ class CDF(object):
 
     def sobre_info(self):
         """Metodo que mostra informação sobre o programa e o desenvolvedor"""
-        tkinter.messagebox.showinfo("SFC v.1", "Desenvolvedor: Adriano António"+"\n"+"Contacto: 922-961-983\n"+"Email: adriano.antonio@outlook.pt ou www.facebook.com\emmer.driizzi\n"+"Desenvolvedor Python - 2018")
+        tkinter.messagebox.showinfo("SFC v.1", "Desenvolvedor: Adriano António"+"\n"+"Contacto: 922-961-983\n"+"Email: adriano.antonio@outlook.pt ou www.facebook.com\\adriano5000\n"+"Desenvolvedor Python - 2018")
 
     def pdf_mesa(self):
         """Metodo que chamada de relatório pdf de convidados sentados na mesa"""
