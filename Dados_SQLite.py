@@ -2,6 +2,8 @@ from sqlite3 import *
 from time import *
 class Manipulacao_SQL(object):
     def __init__(self):
+        """Classe que cuida das queries' em sqlite, isso é muita lógica pessoal
+        Não foi usado neste modulo nenhuma instrução inner, é tudo com base na criação"""
         self.iniciar_db()
 
     def iniciar_db(self):
@@ -29,7 +31,6 @@ class Manipulacao_SQL(object):
         termo_pesquisa = """SELECT * FROM ViewMesa_All"""
         for item in self.conectado.execute(termo_pesquisa, ):
             self.lista_mesas.append(int(item[0]))
-
 
 
     def inserir_convidado(self, nome, mesa):

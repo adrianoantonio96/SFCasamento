@@ -28,9 +28,6 @@ def mesa():
     pdf.drawString(50, 684, noivos_data)
     pdf.setFont("Helvetica-Bold", 15)
     pdf.drawString(50, 620, "Lista de convidados sentados na mesa - total: "+str(tamanho))
-
-
-
     lista_cabecalho = ['Nome', 'Mesa']
     data.insert(0, lista_cabecalho)
     t = Table(data)
@@ -47,8 +44,6 @@ def mesa():
     pdf.showPage()
     pdf.save()
     startfile(arquivo)
-
-
 
 def standby():
     styles = getSampleStyleSheet()
@@ -70,8 +65,6 @@ def standby():
     pdf.drawString(50, 684, noivos_data)
     pdf.setFont("Helvetica-Bold", 15)
     pdf.drawString(50, 590, "Lista de convidados em standby - total: "+str(tamanho))
-
-
     lista_cabecalho = ['Nome', 'Tipo']
     data.insert(0, lista_cabecalho)
     t = Table(data)

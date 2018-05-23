@@ -27,9 +27,6 @@ def activos():
     pdf.drawString(50, 684, noivos_data)
     pdf.setFont("Helvetica-Bold", 15)
     pdf.drawString(50, 620, "Lista de convidados no salão - total: "+ str(tamanho))
-
-
-
     lista_cabecalho = ['Nome', 'Posição', 'Entrada']
     data.insert(0, lista_cabecalho)
     t = Table(data)

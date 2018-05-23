@@ -5,6 +5,8 @@ from Dados_SQLite import Manipulacao_SQL
 
 class Janela_GeralD(object):
     def __init__(self, janela_geral):
+        """Classe auxiliar, é uma janela de inserção de dados sobre o evento
+        Para cada execução, instanciação, só pode haver um evento"""
         self.janela_geral = janela_geral
         self.janela_geral.geometry("300x205")
         self.janela_geral.title("Casamento - Info")
@@ -24,6 +26,7 @@ class Janela_GeralD(object):
         self.inserir.bind("<Enter>", self.validar_inserir)
 
     def validar_inserir(self, e):
+        """Metodo que bloqueia o botão de inserção caso algo esteja incorrecto"""
         if len(self.entry_nomenoivos.get()) >= 4 and len(self.entry_data.get()) == 10:
             self.inserir.config(state = "normal")
         else:
@@ -31,6 +34,7 @@ class Janela_GeralD(object):
 
 
     def inserir_dado(self):
+        """Metodo de inserção de dados do evento"""
         try:
             noivo = self.entry_nomenoivos.get()
             data = self.entry_data.get()
@@ -40,18 +44,8 @@ class Janela_GeralD(object):
         except:
             pass
 
-
-
-
-
-
-
-
-
-
-
-
 def iniciar_janela():
+    """Instanciação da janela auxiliar"""
     janela_geral = Tk()
     janela_geralinfo = Janela_GeralD(janela_geral)
     janela_geral.mainloop()

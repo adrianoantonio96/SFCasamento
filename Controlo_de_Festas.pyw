@@ -9,6 +9,7 @@ import Relatorio_activos
 import Janela_Geral
 class CDF(object):
     def __init__(self, janela_principal):
+        """Classe principal do sistema, onde estão os widgets e é aqui que todos os modulos se relacionam"""
         self.janela_principal = janela_principal
         self.janela_principal.state("zoomed")#Janela em tamanho máximo
         self.janela_principal.resizable(False, False)#Sem redimensionamento
